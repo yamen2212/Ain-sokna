@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        #myInput {
+          background-image: url('/css/searchicon.png');
+          background-position: 10px 12px;
+          background-repeat: no-repeat;
+          width: 100%;
+          font-size: 16px;
+          padding: 12px 20px 12px 40px;
+          border: 1px solid #ddd;
+          margin-bottom: 12px;
+        }
+        
+        #myUL {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+        
+        #myUL li a {
+          border: 1px solid #ddd;
+          margin-top: -1px; /* Prevent double borders */
+          background-color: #f6f6f6;
+          padding: 12px;
+          text-decoration: none;
+          font-size: 18px;
+          color: black;
+          display: block
+        }
+        
+        #myUL li a:hover:not(.header) {
+          background-color: #eee;
+        }
+        </style>
+</head>
+<body>
+    <!-- <h1>Coral Sea Beach and Aqua Park</h1>
+    <img src="./420923207.webp" alt="" style="height: 200px; width: 250px;">
+    <h2>⭐⭐⭐⭐</h2>
+    <h2>half board(breakfast&dinner)</h2>
+    <h2>trible room</h2>
+    <h2>beds=🛏️🛏️🛏️</h2>
+    <h2>cost=EGP 7,822.95</h2>
+    <hr><hr>
+    <h1>Stay Inn Hotel Ain Sokhna</h1>
+    <img src="./355157996.jpg" alt=""  style="height: 200px; width: 250px;">
+    <h2>⭐⭐⭐⭐</h2>
+    <h2>half board(breakfast&dinner)</h2>
+    <h2>double beds🛏️×2</h2>
+    <img src="./478538307.jpg" alt=""  style="height: 200px; width: 250px;">
+    <h2>cost=EGP 7,228.44</h2>
+    <hr><hr> --><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+    <li><a href="https://yamen2212.github.io/Coral-Sea-Beach-and-Aqua-Park/">Coral Sea Beach and Aqua Park</a></li>
+    <li><a href="https://yamen2212.github.io/Stay-Inn-Hotel-Ain-Sokhna/">Stay Inn Hotel Ain Sokhna</a></li>
+  
+   
+  </ul>
+  
+  <script>
+  function myFunction() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+          }
+      }
+  }
+  </script>
+
+<script src="./java.js"></script>
+</body>
+</html>
